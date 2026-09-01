@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script src="/page/page_comm/inject.js"></script>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title data-pnid-children="AUnQb1WEu0eLmMmOGJdrdx">湾盟产业创新服务中心 | 湾数联 GBADA</title>
+  <meta content="湾盟产业创新服务中心（GBAIC）与湾区数字科技产业联盟（GBADA湾数联）官网，立足深圳、链接大湾区，推动数字科技产业生态协同创新与区域合作共赢。" name="description">
+  <meta content="湾盟,湾盟创新中心,GBAIC,湾数联,GBADA,湾区数字科技产业联盟,大湾区,数字科技,产业创新" name="keywords">
+  <meta content="湾盟产业创新服务中心 | 湾数联 GBADA" property="og:title">
+  <meta content="立足深圳，链接大湾区，服务科技产业生态，推动产业协同创新与区域合作共赢。" property="og:description">
+  <meta content="website" property="og:type">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style data-pnid-children="LqJtDcgnrMq8orlrrwj9n2">
+/* ============================================
+   湾盟官网样式
+   响应式单页站点：GBAIC & GBADA
+   ============================================ */
+
+/* CSS Variables */
+:root {
+  --color-primary: #0a1f44;
+  --color-primary-light: #14386e;
+  --color-accent: #d4a55c;
+  --color-accent-hover: #c6964e;
+  --color-text: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-bg: #ffffff;
+  --color-bg-light: #f8fafc;
+  --color-bg-dark: #061428;
+  --color-bg-dark-soft: #0c203d;
+  --color-border: #e5e7eb;
+  --gradient-logo: linear-gradient(90deg, #f59e0b, #ef4444, #8b5cf6, #06b6d4);
+  --gradient-section: linear-gradient(135deg, #0a1f44 0%, #14386e 100%);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --max-width: 1200px;
+  --header-height: 80px;
+  --transition: 0.3s ease;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 20px);
+  height: 100%;
+}
+
+body {
+  font-family: "Noto Sans SC", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.site-footer {
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Typography helpers */
+.text-center { text-align: center; }
+.muted { color: var(--color-text-muted); }
+.light { color: #ffffff; }
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  z-index: 1000;
+  transition: box-shadow var(--transition);
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: auto;
+  height: 44px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 32px;
+}
+
+.main-nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+  position: relative;
+  padding: 8px 0;
+  transition: color var(--transition);
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--color-primary);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 8px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--color-primary);
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  padding-top: var(--header-height); /* 让出固定页眉高度，Banner 顶部不再被菜单盖住 */
+  overflow: hidden;
+}
+
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920 / 764; /* banner同比例，宽度撑满、高度按比例、不裁切 */
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(6, 20, 40, 0.82) 0%, rgba(6, 20, 40, 0.45) 60%, rgba(6, 20, 40, 0.2) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 760px;
+}
+
+.hero-tag {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+  max-width: 620px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(212, 165, 92, 0.35);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+}
+
+.btn-outline {
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  color: #ffffff;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 3;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background var(--transition), transform var(--transition);
+}
+
+.carousel-indicators button.active {
+  background: var(--color-accent);
+  transform: scale(1.2);
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.carousel-arrow:hover {
+  color: var(--color-accent);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev { left: 24px; }
+.carousel-next { right: 24px; }
+
+/* Sections */
+.section {
+  padding: 100px 0;
+}
+
+.section-light {
+  background: var(--color-bg);
+}
+
+.section-dark {
+  background: var(--gradient-section);
+  color: #ffffff;
+}
+
+.section-gradient {
+  background: var(--gradient-section);
+  color: #ffffff;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 56px;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.section-dark .section-label,
+.section-gradient .section-label {
+  color: var(--color-accent);
+}
+
+.section-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.section-header.light h2,
+.section-header.light .section-subtitle {
+  color: #ffffff;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+}
+
+/* Split Layout */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.split-layout.reverse {
+  direction: rtl;
+}
+
+.split-layout.reverse > * {
+  direction: ltr;
+}
+
+.split-text h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.section-dark .split-text h3,
+.section-gradient .split-text h3 {
+  color: #ffffff;
+}
+
+.split-text p {
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.section-dark .split-text p,
+.section-gradient .split-text p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.split-media img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 联盟活动轮播 */
+.activities-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  background: var(--color-bg-dark-soft);
+}
+
+/* 联盟活动区照片为 16:9 横幅，容器改为 16:9 以完整显示不裁切 */
+.activities-box .activities-carousel {
+  aspect-ratio: 16 / 9;
+}
+
+.activities-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.activities-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.activities-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.activities-indicators {
+  bottom: 16px;
+}
+
+.activities-prev { left: 12px; }
+.activities-next { right: 12px; }
+
+@media (max-width: 768px) {
+  .activities-carousel {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* Brand Grid */
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.brand-card {
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.brand-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 服务品牌 Logo 图片位（可直接替换图片文件） */
+.brand-logo {
+  height: 80px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 18px;
+  transition: transform var(--transition);
+}
+
+.brand-card:hover .brand-logo {
+  transform: scale(1.05);
+}
+
+.brand-card h4 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.brand-card p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Intro Box */
+.intro-box {
+  max-width: 900px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.intro-box .lead {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 16px;
+}
+
+.intro-box p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.intro-split {
+  align-items: stretch;
+  margin-bottom: 48px;
+}
+
+.intro-split .split-text {
+  text-align: left;
+}
+
+.intro-split .split-text .lead {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 16px;
+}
+
+.intro-split .split-text p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.intro-carousel {
+  min-height: 100%;
+}
+
+/* Stats Row */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.stat-number,
+.stat-unit {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.stat-unit {
+  color: var(--color-accent);
+  margin-left: 2px;
+}
+
+.stat-label {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Position Grid */
+.position-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 64px;
+}
+
+.position-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.position-card.wide {
+  grid-column: span 2;
+}
+
+.position-card h4 {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 10px;
+}
+
+.position-card p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* People */
+.people-section {
+  margin-bottom: 64px;
+}
+
+.people-section h3 {
+  margin-bottom: 40px;
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.person-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform var(--transition);
+}
+
+.person-card:hover {
+  transform: translateY(-4px);
+}
+
+.person-card.advisor {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.person-card.horizontal {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.person-card.horizontal .person-photo.round {
+  padding: 24px;
+}
+
+.person-card.horizontal .person-photo.round img {
+  width: 200px;
+  height: 200px;
+}
+
+.person-card.horizontal .person-info {
+  padding: 24px;
+}
+
+.person-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.person-photo.round {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.person-photo.round img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+}
+
+.person-info {
+  padding: 24px;
+}
+
+.person-card.advisor .person-info {
+  padding: 32px;
+}
+
+.person-info h4 {
+  font-size: 1.35rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.person-role {
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.person-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+}
+
+/* Activities */
+.activities-box {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Summit Grid */
+.summit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.summit-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px;
+  position: relative;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.summit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.summit-year {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  background: rgba(212, 165, 92, 0.12);
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.summit-card h4 {
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  margin: 8px 0 12px;
+  padding-right: 50px;
+}
+
+.summit-card p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.summit-bar {
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  margin: 12px 0 16px;
+  background: var(--color-accent);
+}
+
+.summit-card:nth-child(1) .summit-bar { background: #00B0F0; }
+.summit-card:nth-child(2) .summit-bar { background: #8b5cf6; }
+.summit-card:nth-child(3) .summit-bar { background: #10b981; }
+.summit-card:nth-child(4) .summit-bar { background: #f59e0b; }
+.summit-card:nth-child(5) .summit-bar { background: #ef4444; }
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: gap var(--transition);
+}
+
+.link-arrow::after {
+  content: "→";
+  transition: transform var(--transition);
+}
+
+.link-arrow:hover {
+  gap: 10px;
+  color: var(--color-primary-light);
+}
+
+/* Service Matrix */
+.service-matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-column {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.service-column:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+.service-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: var(--color-accent);
+}
+
+.service-head h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.service-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.service-list li:last-child {
+  border-bottom: none;
+}
+
+.service-list strong {
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.service-list span {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 32px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-card {
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.contact-card h4 {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+
+.contact-card p,
+.contact-card a {
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.contact-card a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.contact-row {
+  display: flex;
+  gap: 28px;
+}
+
+.contact-row .contact-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-row .contact-col + .contact-col {
+  border-left: 1px solid var(--color-border);
+  padding-left: 28px;
+}
+
+.site-sep {
+  color: var(--color-text-muted);
+  margin: 0 8px;
+}
+
+.contact-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.contact-map iframe,
+.contact-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
+.contact-img {
+  border-radius: var(--radius);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--color-bg-dark);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 64px 0 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-brand img {
+  height: 56px;
+  width: auto;
+  margin-bottom: 16px;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+}
+
+.footer-brand p {
+  max-width: 320px;
+  line-height: 1.7;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color var(--transition);
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--color-accent);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+  z-index: 999;
+  box-shadow: var(--shadow-md);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--color-accent-hover);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .brand-grid,
+  .summit-grid,
+  .service-matrix,
+  .people-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .position-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .position-card.wide {
+    grid-column: span 2;
+  }
+
+  .person-card.advisor {
+    grid-column: span 2;
+    grid-template-columns: 1fr;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 72px;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100dvh - var(--header-height));
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 24px;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
+  }
+
+  .main-nav.open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .main-nav a {
+    display: block;
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .hero {
+  }
+
+  .hero-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
+
+  .split-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .split-layout.reverse {
+    direction: ltr;
+  }
+
+  .brand-grid,
+  .summit-grid,
+  .service-matrix,
+  .people-grid,
+  .position-grid,
+  .stats-row,
+  .contact-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .position-card.wide,
+  .person-card.advisor {
+    grid-column: span 1;
+  }
+
+  .person-card.horizontal {
+    grid-template-columns: 1fr;
+  }
+
+  .person-card.advisor .person-info {
+    padding: 24px;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .footer-grid {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .stat-number,
+  .stat-unit {
+    font-size: 2rem;
+  }
+}
+
+/* Focus accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-slide {
+    transition: none;
+  }
+}
+
+</style>
+  <link href="https://workbuddy-space-static.codebuddy.work/image/jXsUZWuSdGEj2VwI6kGa7e.png" rel="icon" type="image/png">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a aria-label="湾盟首页" class="logo" href="#">
+        <img alt="湾盟产业创新服务中心 GBAIC" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src height="48" src="https://workbuddy-space-static.codebuddy.work/image/XcYDMccTGNcMg2JseGgi3p.png" width="220">
+      </a>
+      <nav aria-label="主导航" class="main-nav" id="mainNav">
+        <ul>
+          <li><a class="active" href="#home">首页</a></li>
+          <li><a href="#gbaic">湾盟中心</a></li>
+          <li><a href="#gbada">湾数联</a></li>
+          <li><a href="#summits">产业峰会</a></li>
+          <li><a href="#services">服务体系</a></li>
+          <li><a href="#contact">联系我们</a></li>
+        </ul>
+      </nav>
+      <button aria-controls="mainNav" aria-expanded="false" aria-label="打开菜单" class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Banner Carousel -->
+    <section aria-label="首页轮播" class="hero" id="home">
+      <div class="hero-carousel" id="heroCarousel">
+        <div class="hero-slide active">
+          <img alt="湾盟产业创新服务中心活动现场" class="hero-bg" loading="eager" src="https://workbuddy-space-static.codebuddy.work/image/msU8AJYobik5HqxxlFyYWq.jpg">
+          
+          
+        </div>
+        <div class="hero-slide">
+          <img alt="湾区数字科技产业联盟活动现场" class="hero-bg" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/OQxxdmtInJX9aKhvV2muxa.jpg">
+          
+          
+        </div>
+        <div class="hero-slide">
+          <img alt="数字科技产业大会与数创奖颁奖盛典" class="hero-bg" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/VrxfsJTE4fCeiMlv3iLlnp.jpg">
+          
+          
+        </div>
+      </div>
+      <div aria-label="轮播指示器" class="carousel-indicators" id="carouselIndicators">
+        <button aria-label="第1张" class="active" data-index="0"></button>
+        <button aria-label="第2张" data-index="1"></button>
+        <button aria-label="第3张" data-index="2"></button>
+      </div>
+      <button aria-label="上一张" class="carousel-arrow carousel-prev" id="carouselPrev">&#10094;</button>
+      <button aria-label="下一张" class="carousel-arrow carousel-next" id="carouselNext">&#10095;</button>
+    </section>
+
+    <!-- GBAIC -->
+    <section class="section section-light" id="gbaic">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">About GBAIC</span>
+          <h2>湾盟产业创新服务中心</h2>
+          <p class="section-subtitle" style="color:#00B0F0">科技产业生态的超级连接器 · AI应用场景落地的加速器</p>
+        </div>
+        <div class="split-layout">
+          <div class="split-text">
+            <h3 style="color:#00B0F0">促进产业链融通创新与区域协同发展</h3>
+            <p>湾盟产业创新服务中心（GBAIC）成立于2023年，以服务粤港澳大湾区国家战略为核心宗旨，定位于<strong>“科技产业生态的超级连接器、AI应用场景落地的加速器”</strong>。</p>
+            <p>我们以“促进产业链融通创新与区域协同发展”为服务目标，推动“产业链、创新链、资金链、政策链”深度融合，面向“科技企业、产业生态、区域政府”，打造“政产学研资用”紧密合作的产业创新服务平台。</p>
+          </div>
+          <div class="split-media">
+            <img alt="湾盟产业创新服务中心揭牌仪式" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src height="500" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/DtBc4q8e236WBtqJSGLX0s.jpg" width="800">
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="text-center">服务品牌 Service Brand</h3>
+          <p class="text-center muted">湾盟产业创新服务中心（GBAIC）通过“湾董会”“湾企生态圈”等品牌活动，促进产业链融资对接、供需对接与企业家合作交流；打造“湾区数字科技50人论坛”“DTWORLD数字科技产业大会”“IDI数创奖（数字科技领域专业奖）”等平台服务品牌，搭建大湾区数字科技产业生态交流合作平台；通过与雄安新区、晋江等区域核心城市对接，策划主办“雄安新区-大湾区企业家峰会暨大湾区科创企业雄安行”、 “晋江经验-湾区创新·科技产业考察与合作对接交流”系列活动，加强政企沟通，促进大湾区科技产业生态与区域城市协同合作发展。</p>
+          <div class="brand-grid">
+            <article class="brand-card">
+              <img alt="湾董会 Logo" class="brand-logo" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/eHMXA40sfqWsbd9CPxlUdy.png">
+              <h4>湾董会</h4>
+              <p>产业链融资对接、供需对接与企业家合作交流的高端圈层。</p>
+            </article>
+            <article class="brand-card">
+              <img alt="湾企生态圈 Logo" class="brand-logo" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/xnPIMZxn2sz5YHL7u4GgoG.png">
+              <h4>湾企生态圈</h4>
+              <p>促进大湾区企业间资源共享、供需匹配与协同创新。</p>
+            </article>
+            <article class="brand-card">
+              <img alt="湾区数字科技50人论坛 Logo" class="brand-logo" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/0cqBXu5qv8met4lm9BNcBD.png">
+              <h4>湾区数字科技50人论坛</h4>
+              <p>聚焦数字科技前沿趋势，搭建政产学研资用对话平台。</p>
+            </article>
+            <article class="brand-card">
+              <img alt="DTWORLD Logo" class="brand-logo" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/0TbxuizfFlKCyvRm7JNYUA.png">
+              <h4>DTWORLD 数字科技产业大会</h4>
+              <p>年度国际数字科技产业大会暨 IDI 数创奖颁奖盛典。</p>
+            </article>
+            <article class="brand-card">
+              <img alt="IDI 数创奖 Logo" class="brand-logo" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/6TX0Qq9SFu8bsKR3tQHSmi.png">
+              <h4>IDI 数创奖</h4>
+              <p>数字科技领域专业奖项，表彰创新产品与解决方案。</p>
+            </article>
+            <article class="brand-card">
+              <img alt="区域协同 Logo" class="brand-logo" data-last-crop-h data-last-crop-w data-last-crop-x data-last-crop-y data-original-src loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/gpVglSexdvG4x18x0uI9CP.png">
+              <h4>区域城市合作对接</h4>
+              <p>与雄安新区、晋江等区域核心城市联动，推动跨区域产业协同。</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GBADA -->
+    <section class="section section-dark" id="gbada">
+      <div class="container">
+        <div class="section-header light">
+          <span class="section-label">GBADA 湾数联</span>
+          <h2>湾区数字科技产业联盟</h2>
+          <p class="section-subtitle">大湾区数字科技产业生态交流合作与协同发展平台</p>
+        </div>
+
+        <div class="split-layout intro-split">
+          <div class="split-text">
+            <p class="lead">湾区数字科技产业联盟（GBADA湾数联）发起于2023湾区数字科技50人论坛，由湾盟产业创新服务中心（GBAIC）联合近百家产学研平台机构与行业领军企业共同发起。</p>
+            <p>目前联盟平台汇聚深圳及大湾区 <strong>600+</strong> 重点企业成员，领域涵盖智能制造、人工智能、智慧城市、新能源、新材料、智能装备、信息软件、数字创意、产业服务等，其中上市公司、国家级专精特新“小巨人”、拟上市企业等逾 <strong>100+</strong> 家。</p>
+          </div>
+          <div class="split-media activities-carousel intro-carousel">
+            <div class="activities-slide active">
+              <img alt="宋会长致辞" class="activities-img" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/HOZQ61KxaqTauReAUk8eYG.jpg">
+            </div>
+            <div class="activities-slide">
+              <img alt="湾数联启动" class="activities-img" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/WSP9Y7HYHczpqcFJA5j2Bo.jpg">
+            </div>
+            <div class="activities-slide">
+              <img alt="DTWORLD 峰会" class="activities-img" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/rzVIfEwYilaCzaGGC3bPc2.jpg">
+            </div>
+            <div class="activities-slide">
+              <img alt="湾数联题字" class="activities-img" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/qMeHS6ZvuhmqRy3AFMsNdC.jpg">
+            </div>
+            <div aria-label="联盟简介轮播指示器" class="carousel-indicators activities-indicators">
+              <button aria-label="第1张" class="active" data-index="0"></button>
+              <button aria-label="第2张" data-index="1"></button>
+              <button aria-label="第3张" data-index="2"></button>
+              <button aria-label="第4张" data-index="3"></button>
+            </div>
+            <button aria-label="上一张" class="carousel-arrow carousel-prev activities-prev">&#10094;</button>
+            <button aria-label="下一张" class="carousel-arrow carousel-next activities-next">&#10095;</button>
+          </div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-item">
+            <span class="stat-number" data-target="600">0</span><span class="stat-unit">+</span>
+            <span class="stat-label">重点企业成员</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="100">0</span><span class="stat-unit">+</span>
+            <span class="stat-label">上市/专精特新/拟上市企业</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="10">10</span><span class="stat-unit">大</span>
+            <span class="stat-label">重点产业领域</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="3">3</span><span class="stat-unit">大</span>
+            <span class="stat-label">服务定位/企业、产业、政府</span>
+          </div>
+        </div>
+
+        <div class="position-grid">
+          <div class="position-card">
+            <h4>服务定位</h4>
+            <p>立足深圳，链接大湾区，服务科技产业生态。</p>
+          </div>
+          <div class="position-card">
+            <h4>联盟定位</h4>
+            <p>大湾区数字科技产业生态交流合作与协同发展平台。</p>
+          </div>
+          <div class="position-card">
+            <h4>核心价值</h4>
+            <p>开放、共享、共赢</p>
+          </div>
+          <div class="position-card">
+            <h4>服务宗旨</h4>
+            <p>数实融合、产业共创</p>
+          </div>
+          <div class="position-card wide">
+            <h4>联盟使命</h4>
+            <p>推动湾区数字科技产业生态协同创新及与区域城市间的合作共赢。</p>
+          </div>
+        </div>
+
+        <div class="people-section">
+          <h3 class="text-center light">荣誉顾问 & 联盟主席 & 发起人</h3>
+          <div class="people-grid">
+            <article class="person-card advisor">
+              <div class="person-photo">
+                <img alt="宋志平会长为湾数联题词" height="300" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/9gqS6pyys9jPFQGQCDvxcS.jpg" width="600">
+              </div>
+              <div class="person-info">
+                <h4>宋志平</h4>
+                <p class="person-role">湾数联荣誉顾问</p>
+                <p class="person-desc">中国上市公司协会会长、中国建材集团公司原党委书记/董事长。宋会长为湾数联题词：<strong>“数实融合，产业共创！开放、共享、共赢！祝湾数联百尺竿头！”</strong></p>
+              </div>
+            </article>
+            <article class="person-card horizontal">
+              <div class="person-photo round">
+                <img alt="欧木兰" height="300" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/pfElM3UGYRxGLVk1yEj578.png" width="300">
+              </div>
+              <div class="person-info">
+                <h4>欧木兰</h4>
+                <p class="person-role">湾区数字科技产业联盟主席</p>
+                <p class="person-desc">国显科技创始人/总经理</p>
+              </div>
+            </article>
+            <article class="person-card horizontal">
+              <div class="person-photo round">
+                <img alt="连荣蔚" height="300" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/qufl7EguFYLKyBM88kKlCs.png" width="300">
+              </div>
+              <div class="person-info">
+                <h4>连荣蔚</h4>
+                <p class="person-role">湾区数字科技产业联盟发起人</p>
+                <p class="person-desc">深圳市福田区第八/九届人大代表、深圳市青年科学家协会副会长、湾盟产业创新服务中心（GBAIC）董事长、互上品牌顾问（22AILab）董事长、世界人工智能眼镜联盟（WAEA）秘书长。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="activities-box">
+          <div class="split-layout reverse">
+            <div class="split-text">
+              <h3 class="light">联盟活动</h3>
+              <p class="light">湾数联通过“湾董会”“湾企生态圈”等品牌活动，促进产业链上下游供需对接、融资对接与企业合作交流，促进企业家之间相互交流与学习，助力产业创新与生态合作共赢。</p>
+              <a class="btn btn-primary" href="#summits">查看产业峰会</a>
+            </div>
+            <div class="split-media activities-carousel">
+              <div class="activities-slide active">
+                <img alt="联盟活动01" class="activities-img" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/WtEzwwTqd3PHbcBsJhZ0Gl.jpg">
+              </div>
+              <div class="activities-slide">
+                <img alt="联盟活动02" class="activities-img" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/eKpYVFokwnzn79qd0b1wL6.jpg">
+              </div>
+              <div class="activities-slide">
+                <img alt="联盟活动03" class="activities-img" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/jhyM2Ee0YI96kxi8Vtn9El.jpg">
+              </div>
+              <div aria-label="联盟活动轮播指示器" class="carousel-indicators activities-indicators">
+                <button aria-label="第1张" class="active" data-index="0"></button>
+                <button aria-label="第2张" data-index="1"></button>
+                <button aria-label="第3张" data-index="2"></button>
+              </div>
+              <button aria-label="上一张" class="carousel-arrow carousel-prev activities-prev">&#10094;</button>
+              <button aria-label="下一张" class="carousel-arrow carousel-next activities-next">&#10095;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summits -->
+    <section class="section section-light" id="summits">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Summits</span>
+          <h2>产业峰会</h2>
+          <p class="section-subtitle">搭建数字科技产业生态交流合作平台</p>
+        </div>
+        <div class="split-layout">
+          <div class="split-media">
+            <img alt="产业峰会精彩瞬间" height="500" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/A25cBCwSwrunzfpUDmq4Ta.jpg" width="800">
+          </div>
+          <div class="split-text">
+            <p>从“湾区数字科技50人论坛”到“DTWORLD国际数字科技领袖峰会”，再到跨区域联动的“雄安-大湾区企业家峰会”“晋江经验与湾区创新之夜”，湾盟与湾数联持续打造高质量产业活动品牌。</p>
+          </div>
+        </div>
+        <div class="summit-grid">
+          <article class="summit-card">
+            <span class="summit-year">2023</span>
+            <h4>湾区数字科技50人论坛</h4>
+            <div class="summit-bar"></div>
+            <p>数实融合 产业共创 | “2023湾区数字科技50人论坛”成功举办！</p>
+            <a class="link-arrow" href="https://mp.weixin.qq.com/s/ZTsHZYNWS8iWz_6PB0GDMw" rel="noopener noreferrer" target="_blank">阅读报道</a>
+          </article>
+          <article class="summit-card">
+            <span class="summit-year">2023</span>
+            <h4>DTWORLD国际数字科技领袖峰会</h4>
+            <div class="summit-bar"></div>
+            <p>2023DTWORLD国际数字科技领袖峰会/数创奖颁奖盛典成功举行！</p>
+            <a class="link-arrow" href="https://mp.weixin.qq.com/s/jQRsyhm2T4ztChqF0G6EGg" rel="noopener noreferrer" target="_blank">阅读报道</a>
+          </article>
+          <article class="summit-card">
+            <span class="summit-year">2024</span>
+            <h4>DTWORLD数字科技产业大会</h4>
+            <div class="summit-bar"></div>
+            <p>DTWORLD2024第二届数字科技产业大会/数创奖颁奖盛典成功举办！</p>
+            <a class="link-arrow" href="https://mp.weixin.qq.com/s/bfUh7iaryFVMpojHEpUapA" rel="noopener noreferrer" target="_blank">阅读报道</a>
+          </article>
+          <article class="summit-card">
+            <span class="summit-year">2024</span>
+            <h4>雄安-大湾区企业家峰会</h4>
+            <div class="summit-bar"></div>
+            <p>2024雄安-大湾区企业家峰会/湾区科技创新企业雄安行成功举行！</p>
+            <a class="link-arrow" href="https://mp.weixin.qq.com/s/WhJvALpnYk8ddd3_bTuoLg" rel="noopener noreferrer" target="_blank">阅读报道</a>
+          </article>
+          <article class="summit-card">
+            <span class="summit-year">2024</span>
+            <h4>“晋江经验与湾区创新”之夜</h4>
+            <div class="summit-bar"></div>
+            <p>“晋江经验与湾区创新”之夜 | 2024晋江国资国企-湾区企业合作项目推介活动成功举行！</p>
+            <a class="link-arrow" href="https://mp.weixin.qq.com/s/shhWThY4qEe0dMuWj7n7Hg" rel="noopener noreferrer" target="_blank">阅读报道</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section-gradient" id="services">
+      <div class="container">
+        <div class="section-header light">
+          <span class="section-label">Services</span>
+          <h2>服务体系</h2>
+          <p class="section-subtitle">面向企业、产业、政府的三维服务矩阵</p>
+        </div>
+        <div class="service-matrix">
+          <article class="service-column">
+            <div class="service-head">
+              <span aria-hidden="true" class="service-icon">企</span>
+              <h3>面向企业</h3>
+            </div>
+            <ul class="service-list">
+              <li><strong>政企沟通</strong><span>搭建企业与政府的沟通桥梁</span></li>
+              <li><strong>供需链接</strong><span>精准匹配产业链上下游资源</span></li>
+              <li><strong>资本加速</strong><span>融资对接与资本服务支持</span></li>
+              <li><strong>出海护航</strong><span>助力企业拓展国际市场</span></li>
+            </ul>
+          </article>
+          <article class="service-column">
+            <div class="service-head">
+              <span aria-hidden="true" class="service-icon">产</span>
+              <h3>面向产业</h3>
+            </div>
+            <ul class="service-list">
+              <li><strong>产业峰会</strong><span>打造高质量行业交流盛会</span></li>
+              <li><strong>产业平台</strong><span>建设产业生态合作平台</span></li>
+              <li><strong>生态服务</strong><span>整合产学研资用多方资源</span></li>
+              <li><strong>产业运营</strong><span>持续运营产业创新载体</span></li>
+            </ul>
+          </article>
+          <article class="service-column">
+            <div class="service-head">
+              <span aria-hidden="true" class="service-icon">政</span>
+              <h3>面向政府</h3>
+            </div>
+            <ul class="service-list">
+              <li><strong>产业顾问</strong><span>提供产业规划与决策咨询</span></li>
+              <li><strong>载体共建</strong><span>联合打造产业创新载体</span></li>
+              <li><strong>产业招引</strong><span>精准招商与项目对接</span></li>
+              <li><strong>区域协同</strong><span>推动跨区域产业合作发展</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-light" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Contact</span>
+          <h2>联系我们</h2>
+          <p class="section-subtitle">期待与您携手，共创科技产业新未来</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-card">
+              <h4>公司地址</h4>
+              <p>深圳市福田区金田路现代国际大厦2010A</p>
+            </div>
+            <div class="contact-card contact-row">
+              <div class="contact-col">
+                <h4>移动电话</h4>
+                <p><a href="tel:13828786118">138 2878 6118</a></p>
+              </div>
+              <div class="contact-col">
+                <h4>电子邮箱</h4>
+                <p><a href="mailto:dt_world@163.com">dt_world@163.com</a></p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <h4>官方网址</h4>
+              <p><a href="https://GBAIC.com.cn" target="_blank" rel="noopener">GBAIC.com.cn</a><span class="site-sep"> · </span><a href="https://GBADA.cn" target="_blank" rel="noopener">GBADA.cn</a></p>
+            </div>
+          </div>
+          <div class="contact-map">
+            <img class="contact-img" src="https://workbuddy-space-static.codebuddy.work/image/qbq6ePgJUC8WN2Nx67Z35L.jpg" alt="湾盟产业创新服务中心" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img alt="湾盟产业创新服务中心" height="60" loading="lazy" src="https://workbuddy-space-static.codebuddy.work/image/XcYDMccTGNcMg2JseGgi3p.png" width="270">
+          <p>立足深圳 · 链接大湾区 · 服务科技产业生态</p>
+        </div>
+        <div class="footer-links">
+          <h4>快速链接</h4>
+          <ul>
+            <li><a href="#gbaic">湾盟中心</a></li>
+            <li><a href="#gbada">湾数联</a></li>
+            <li><a href="#summits">产业峰会</a></li>
+            <li><a href="#services">服务体系</a></li>
+            <li><a href="#contact">联系我们</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>联系方式</h4>
+          <p>深圳市福田区金田路现代国际大厦2010A</p>
+          <p>电话：<a href="tel:13828786118">138 2878 6118</a></p>
+          <p>邮箱：<a href="mailto:dt_world@163.com">dt_world@163.com</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 湾盟产业创新服务中心 GBAIC / 湾区数字科技产业联盟 GBADA. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a aria-label="返回顶部" class="back-to-top" href="#home" id="backToTop">&#8593;</a>
+
+  <script data-pnid-children="J6ZnEUqiBDIg8NaacTl9Yt">
+/**
+ * 湾盟官网交互脚本
+ * - 移动端导航
+ * - 首页轮播
+ * - 滚动监听与返回顶部
+ * - 数字统计动画
+ */
+
+(function () {
+  'use strict';
+
+  // ===== 移动端导航 =====
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  const navLinks = mainNav ? mainNav.querySelectorAll('a') : [];
+
+  function toggleMenu(open) {
+    if (!menuToggle || !mainNav) return;
+    const isOpen = open === undefined ? !mainNav.classList.contains('open') : open;
+    mainNav.classList.toggle('open', isOpen);
+    menuToggle.classList.toggle('open', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', function () {
+      toggleMenu();
+    });
+
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        toggleMenu(false);
+      });
+    });
+  }
+
+  // ===== 通用轮播 =====
+  function initCarousel(container) {
+    const slides = container.querySelectorAll('.hero-slide, .activities-slide');
+    const indicators = container.querySelectorAll('.carousel-indicators button');
+    const prevBtn = container.querySelector('.carousel-prev');
+    const nextBtn = container.querySelector('.carousel-next');
+    let currentSlide = 0;
+    let slideTimer = null;
+    const slideInterval = 6000;
+
+    function showSlide(index) {
+      if (slides.length === 0) return;
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle('active', i === index);
+      });
+
+      indicators.forEach(function (dot, i) {
+        dot.classList.toggle('active', i === index);
+      });
+
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    function startCarousel() {
+      if (slideTimer) clearInterval(slideTimer);
+      slideTimer = setInterval(nextSlide, slideInterval);
+    }
+
+    if (slides.length > 0) {
+      if (nextBtn) nextBtn.addEventListener('click', function () { nextSlide(); startCarousel(); });
+      if (prevBtn) prevBtn.addEventListener('click', function () { prevSlide(); startCarousel(); });
+
+      indicators.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          const index = parseInt(dot.getAttribute('data-index'), 10);
+          if (!isNaN(index)) {
+            showSlide(index);
+            startCarousel();
+          }
+        });
+      });
+
+      startCarousel();
+    }
+  }
+
+  document.querySelectorAll('.hero-carousel, .activities-carousel').forEach(initCarousel);
+
+  // ===== 滚动监听：导航高亮 & 返回顶部 =====
+  const header = document.getElementById('header');
+  const backToTop = document.getElementById('backToTop');
+  const sections = document.querySelectorAll('section[id]');
+
+  function onScroll() {
+    const scrollY = window.scrollY || window.pageYOffset;
+
+    // Header shadow
+    if (header) {
+      header.style.boxShadow = scrollY > 10 ? 'var(--shadow-md)' : 'var(--shadow-sm)';
+    }
+
+    // Back to top
+    if (backToTop) {
+      backToTop.classList.toggle('visible', scrollY > 400);
+    }
+
+    // Active nav link
+    let current = '';
+    sections.forEach(function (section) {
+      const sectionTop = section.offsetTop - 120;
+      if (scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(function (link) {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (backToTop) {
+    backToTop.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ===== 数字统计动画 =====
+  const statNumbers = document.querySelectorAll('.stat-number');
+  let statsAnimated = false;
+
+  function animateStats() {
+    if (statsAnimated) return;
+    const statsSection = document.querySelector('.stats-row');
+    if (!statsSection) return;
+
+    const rect = statsSection.getBoundingClientRect();
+    if (rect.top > window.innerHeight || rect.bottom < 0) return;
+
+    statsAnimated = true;
+
+    statNumbers.forEach(function (el) {
+      const target = parseInt(el.getAttribute('data-target'), 10);
+      if (isNaN(target)) return;
+
+      const duration = 1500;
+      const startTime = performance.now();
+
+      function update(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // easeOutQuart
+        const eased = 1 - Math.pow(1 - progress, 4);
+        el.textContent = Math.floor(eased * target);
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = target;
+        }
+      }
+
+      requestAnimationFrame(update);
+    });
+  }
+
+  window.addEventListener('scroll', animateStats, { passive: true });
+  animateStats();
+})();
+
+</script>
+</body>
+</html>
